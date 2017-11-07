@@ -1,0 +1,325 @@
+$main-color:#54C08B;
+$secondary-color:#37495F;
+/**
+ * Demo Styles
+ */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+
+  color:#ffffff;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+header{
+
+  padding: 10px 20px;
+   background-color: #5890a7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .branding{
+    img{
+      width: 20px;
+      display: inline-block;
+    }
+    span{
+      display: inline-block;
+    }
+  }
+  nav{
+    a{
+      font-size: 0.9em;
+      display: inline-block;
+      padding: 5px 10px;
+      color:darken($secondary-color, 10%);
+      text-decoration: none;
+      position: relative;
+      cursor: pointer;
+      &:hover::after{
+          content:'';
+          position: absolute;
+          bottom: -5px;
+          left: 0px;
+          width: 100%;
+          height: 3px;
+          background-color: $main-color;
+
+      }
+    }
+  }
+}
+.center {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 64px;
+  max-width: 640px;
+  width: 94%;
+  img{
+    max-width: 200px;
+  }
+}
+.user-list{
+  list-style: none;
+  text-align: left;
+  li{
+    height: 50px;
+    display: flex;
+    margin-bottom: 5px;
+    span{
+      display: inline-block;
+      line-height: 50px;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+    .date{
+      color:darken($main-color,10%);
+      font-size: 0.9em;
+    }
+    img{
+      border: 1px solid rgba($secondary-color,0.5);
+      border-radius: 50%;
+
+    }
+  }
+
+}
+/**
+ * Footer Styles
+ */
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+.logo-small{
+  transition: 600ms;
+  transform-origin: 50% 40%;
+  &:hover{
+    transform: rotate(360deg);
+  }
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PT Sans', Arial, Verdana;
+  background-color: #eee;
+}
+
+a{
+color: #ffffff;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  position: relative;
+  background-color: #2c3e50;
+  z-index: 7;
+
+  li {
+    float: left;
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    font-size: 18px;
+    z-index: 9;
+  }
+}
+
+a.active {
+  background-color: #e74c3c;
+  pointer-events: none;
+}
+
+li.slider {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e74c3c;
+  z-index: 8;
+  transition: left .4s, background-color .4s;
+}
+
+.menu li:nth-child(1):hover,
+.menu li:nth-child(1):focus,
+.menu li:nth-child(1):active {
+  & ~ .slider {
+    left: 0;
+    background-color: #3498db;
+  }
+}
+
+
+.menu li:nth-child(2):hover,
+.menu li:nth-child(2):focus,
+.menu li:nth-child(2):active {
+  & ~ .slider {
+    left: 25%;
+    background-color: #9b59b6;
+  }
+}
+
+.menu li:nth-child(3):hover,
+.menu li:nth-child(3):focus,
+.menu li:nth-child(3):active {
+  & ~ .slider {
+    left: 50%;
+    background-color: #e67e22;
+  }
+}
+
+.menu li:nth-child(4):hover,
+.menu li:nth-child(4):focus,
+.menu li:nth-child(4):active {
+  & ~ .slider {
+    left: 75%;
+    background-color: #16a085;
+  }
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button3 {background-color: #f44336;} /* Red */ 
+
+///////////////////////////
+//                       //
+//  TWITTER LOADER iCON  //
+//                       //
+///////////////////////////
+
+// Variables (play/customize)
+
+$logocolor: #5EA9DD;
+$bkgcolor: #323332;
+$speed: 1s;
+$minstroke: 1px;
+$maxstroke: 4px;
+$fillopacity0: 0.15;
+$fillopacity1: 0.5;
+
+//SCSS
+
+
+.wrapper {
+  width: 200px;
+  margin: 20px auto;
+}
+
+ svg {
+
+  stroke-width: 2;
+  fill: $logocolor;
+  /*stroke: $logocolor;*/
+  stroke-width: 1px;
+  /*animation: tweetloading $speed linear infinite;*/
+}
+@keyframes tweetloading {
+  0% {
+    stroke-dashoffset: 1200;
+    fill-opacity: $fillopacity0;
+    stroke-width: $minstroke;
+  }
+
+  50% {
+    fill-opacity: $fillopacity1;
+    stroke-width: $maxstroke;
+  }
+
+  100% {
+    stroke-dashoffset: -1000;
+    fill-opacity: $fillopacity0;
+    stroke-width: $minstroke;
+  }
+}
