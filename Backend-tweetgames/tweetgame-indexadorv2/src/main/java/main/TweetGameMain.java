@@ -22,18 +22,16 @@ public class TweetGameMain {
     public static void main(String[] args) throws IOException, ParseException {
 
 
-        //Observacion: Cada controlador funciona por separado
-
         //1: Inicial controlador recolector e indexador
 
-        /*tweetgame_core tc = new tweetgame_core();
-        /tc.beginProcess();*/
+        tweetgame_core tc = new tweetgame_core();
+        tc.beginProcess();
 
 
         //2: Inicial controladores de neo4j
-        /*neo4j n4 = new neo4j("bolt://localhost:7687","neo4j","123");
+        neo4j n4 = new neo4j("bolt://localhost:7687","neo4j","123");
         n4.init(); //Inicializacion de conexion mongo-neo4j
-        n4.obtaintopUser();*/
+        n4.obtaintopUser();
 
 
 
